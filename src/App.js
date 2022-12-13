@@ -1,9 +1,13 @@
-import logo from './logo.svg';
+import Home from './components/Home/Home'
 import './App.css';
-import Home from './components/Home/Home';
 
-export default function App() {
+function App() {
+
   return (
-    <Home/>
+    <div>
+      <Home />
+    </div>
   );
 }
+
+export default App;

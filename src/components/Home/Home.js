@@ -2,7 +2,7 @@ import './Home.css'
 
 export default function Home() {
     return (  
-        <header className="">
+        <header>
             <h1>Proyecto - Ricky & Morty</h1>
             <nav>
                 <ul>
