@@ -7,23 +7,6 @@
     height: 500px;
 }
 
-h1,nav{
-    width: 600px;
-    padding: 40px !important;
-    color: #344D67;
-}
-
 h1{
     font-weight: 500;
-}
-
-.botones{
-    background-color:#344D67!important;
-    color: #6ECCAF;
-}
-.botones:hover, .boton:hover, .btn-active{
-    background-color: #6ECCAF !important;
-    color: #344D67!important;
-    width: fit-content;
-    
 }
