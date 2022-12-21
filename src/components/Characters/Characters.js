@@ -1,7 +1,11 @@
+
+import{useEffect, useState} from 'react';
+import { Fragment } from 'react';
+
 import Navegation from '../Navegation/Navegation';
 import Filters from "../Filters/Filters";
 import SectionCards from "../SectionCards/SectionCards";
-import{useEffect, useState} from 'react';
+import './Characters.css'
 
 export default function Characters() {
     let [datos,setDatos]=useState([]);
@@ -54,17 +58,21 @@ export default function Characters() {
 
 
     return(
-        <div>
+        <Fragment>
             <Navegation />
-            <section className='bg-success d-flex p-2'>
-                <Filters nombreFiltro="Character Alive" datoFiltro="Alive" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Character Dead" datoFiltro="Dead" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Female" datoFiltro="Female" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Male" datoFiltro="Male" muestraValor={mostrarValor}/> 
-                <Filters nombreFiltro="Origin Unknown" datoFiltro="unknown" muestraValor={mostrarValor}/> 
-            </section>
-                          
-            <SectionCards datos={datos} />
-        </div>
+            <main className='container'>
+                <section className='row section-filters filters py-5'>
+                    <h2>Filters</h2>
+                    <div className='filters d-flex justify-content-between flex-wrap'>
+                        <Filters nombreFiltro="Character Alive" datoFiltro="Alive" muestraValor={mostrarValor}/> 
+                        <Filters nombreFiltro="Character Dead" datoFiltro="Dead" muestraValor={mostrarValor}/> 
+                        <Filters nombreFiltro="Female" datoFiltro="Female" muestraValor={mostrarValor}/> 
+                        <Filters nombreFiltro="Male" datoFiltro="Male" muestraValor={mostrarValor}/> 
+                        <Filters nombreFiltro="Origin Unknown" datoFiltro="unknown" muestraValor={mostrarValor}/> 
+                    </div>
+                </section>               
+                <SectionCards datos={datos} />
+            </main>
+        </Fragment>
     )
 }
