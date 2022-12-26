@@ -11,13 +11,3 @@
     color: #6ECCAF !important;
     font-size: 20px;
 }
-
-.botones{
-    background-color:#344D67!important;
-    color: #6ECCAF;
-}
-.botones:hover, .btn-active{
-    background-color: #6ECCAF !important;
-    color: #344D67!important;
-    width: fit-content;   
-}

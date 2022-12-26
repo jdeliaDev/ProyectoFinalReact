@@ -1,4 +1,4 @@
-import './Filters.css'
+import './Filters.css';
 
 export default function Filters({nombreFiltro,datoFiltro,muestraValor}) {
 
