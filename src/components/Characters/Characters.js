@@ -43,7 +43,6 @@ export default function Characters() {
         
     }
 
-      //saco la funcion por fuera para que lo pueda utilizar en mi funcion del evento
     const mostarInfo =async ()=>{
         let dato= await traerInfo()
         let infoPersonajes= dato.results
@@ -51,7 +50,7 @@ export default function Characters() {
         setDatos(infoPersonajes)
         setInfoCompleta(infoPersonajes)
     }
-    //Se ejecuta cuando se renderiza la pagina
+
      useEffect(()=>{
         mostarInfo() 
      },[])
@@ -61,13 +60,13 @@ export default function Characters() {
         <Fragment>
             <Navegation />
             <main className='container'>
-                <section className='row section-filters filters py-5'>
+                <section className='row section-filters py-5'>
                     <h2>Filters</h2>
-                    <div className='filters d-flex justify-content-between flex-wrap'>
+                    <div className='d-flex justify-content-between flex-wrap'>
                         <Filters nombreFiltro="Character Alive" datoFiltro="Alive" muestraValor={mostrarValor}/> 
                         <Filters nombreFiltro="Character Dead" datoFiltro="Dead" muestraValor={mostrarValor}/> 
-                        <Filters nombreFiltro="Female" datoFiltro="Female" muestraValor={mostrarValor}/> 
                         <Filters nombreFiltro="Male" datoFiltro="Male" muestraValor={mostrarValor}/> 
+                        <Filters nombreFiltro="Female" datoFiltro="Female" muestraValor={mostrarValor}/> 
                         <Filters nombreFiltro="Origin Unknown" datoFiltro="unknown" muestraValor={mostrarValor}/> 
                     </div>
                 </section>               

@@ -5,12 +5,12 @@ export default function Card ({info}) {
     const[ocultar,setOcultar]=useState(true);
 
     const mostrar =()=>{
-        console.log(info)//objeto con la info del personaje
-        setOcultar(false) //nos ayuda a mostrar el contenedor de info
+        console.log(info)
+        setOcultar(false)
     }
 
     const ocularInfo=()=>{
-        setOcultar(true) //nos ayuda a ocultarlo el contenedor de info
+        setOcultar(true)
     }
 
     return(
@@ -20,9 +20,7 @@ export default function Card ({info}) {
                 <h3>{info.name}</h3>
 
                 <button onClick={mostrar} className={ ocultar === true ?"btn btn-active align-self-end":"d-none"}>Now More..</button>  
-
-                {/* puedo o utilizar 
-            ocultar? <button onClick={mostrar}>Now More..</button>  :''*/}          
+      
             </div>
             {ocultar ===false?
                 <div className='p-5 d-flex flex-column align-items-center'>
