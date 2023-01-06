@@ -25,21 +25,27 @@ export default function Card ({info}) {
             ocultar? <button onClick={mostrar}>Now More..</button>  :''*/}          
             </div>
             {ocultar ===false?
-                <div className='p-5 flex-column align-items-center'>
+                <div className='p-5 d-flex flex-column align-items-center'>
                     <button className="btn btn-active d-flex align-self-end m-2" onClick={ocularInfo}>X</button>
                     <ul className="list-group">
-                        <li className="list-group-item p-3">Character Status {info.status}</li>
+                        <li className="list-group-item p-3 fw-bold">Character status {info.status}</li>
                         <li className="list-group-item p-3">
-                            Species 
-                            <div>{info.species}</div>
+                            <div className='ms-2'>
+                                Species 
+                                <div className='fw-bold'>{info.species}</div>
+                            </div>
                         </li>
                         <li className="list-group-item p-3">
-                            Origin 
-                            <div>{info.origin.name}</div>
+                            <div className='ms-2'>
+                                Origin 
+                                <div className='fw-bold'>{info.origin.name}</div>
+                            </div>
                         </li>
                         <li className="list-group-item p-3">
-                            Gender 
-                            <div>{info.gender}</div>
+                            <div className='ms-2'>
+                                Gender 
+                                <div className='fw-bold'>{info.gender}</div>
+                            </div>
                         </li>
                     </ul>
                 </div>:''
